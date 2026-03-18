@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/03_sql/creation_tables_assurance.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/03_sql/nettoyer_doublon_region.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/03_sql/requete.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/03_sql/verifier_donnees.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/03_sql/01_create_tables.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/03_sql/02_create_geo_source.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/03_sql/03_insert_geo.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/03_sql/04_import_contrat.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/03_sql/05_verifications.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/03_sql/06_requetes.sql" dialect="MySQL" />
   </component>
 </project>

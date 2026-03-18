@@ -2,9 +2,11 @@
 <project version="4">
   <component name="DataSourcePerFileMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/6d72bc5c-a2ed-48a8-942d-4eb0bd62d713/console.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
-    <file url="file://$PROJECT_DIR$/03_sql/creation_tables_assurance.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
-    <file url="file://$PROJECT_DIR$/03_sql/nettoyer_doublon_region.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
-    <file url="file://$PROJECT_DIR$/03_sql/requete.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
-    <file url="file://$PROJECT_DIR$/03_sql/verifier_donnees.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
+    <file url="file://$PROJECT_DIR$/03_sql/01_create_tables.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
+    <file url="file://$PROJECT_DIR$/03_sql/02_create_geo_source.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
+    <file url="file://$PROJECT_DIR$/03_sql/03_insert_geo.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
+    <file url="file://$PROJECT_DIR$/03_sql/04_import_contrat.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
+    <file url="file://$PROJECT_DIR$/03_sql/05_verifications.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
+    <file url="file://$PROJECT_DIR$/03_sql/06_requetes.sql" value="6d72bc5c-a2ed-48a8-942d-4eb0bd62d713" />
   </component>
 </project>

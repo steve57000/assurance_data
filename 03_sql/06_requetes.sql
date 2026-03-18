@@ -10,7 +10,7 @@
 SELECT Contrat_ID, Surface
 FROM CONTRAT
 WHERE Surface IS NOT NULL
-ORDER BY Surface DESC, Contrat_ID ASC
+ORDER BY Surface DESC
 LIMIT 5;
 
 -- Requête 5
@@ -24,7 +24,7 @@ FROM CONTRAT;
 SELECT Valeur_declaree_biens, COUNT(*) AS nombre_contrats
 FROM CONTRAT
 GROUP BY Valeur_declaree_biens
-ORDER BY nombre_contrats DESC, Valeur_declaree_biens ASC;
+ORDER BY nombre_contrats DESC;
 
 -- Requête 7
 -- Quel est le nombre de formules Integral sur la région Pays de la Loire ?
@@ -50,7 +50,7 @@ INNER JOIN DEPARTEMENT d
     ON co.dep_code = d.dep_code
 WHERE c.Type_local = 'Maison'
   AND d.dep_code = '71'
-ORDER BY c.Contrat_ID ASC;
+ORDER BY c.Contrat_ID;
 
 -- Requête 9
 -- Quelle est la surface moyenne des contrats à Paris ?
@@ -71,7 +71,7 @@ INNER JOIN COMMUNE co
 INNER JOIN DEPARTEMENT d
     ON co.dep_code = d.dep_code
 GROUP BY d.dep_code, d.dep_nom
-ORDER BY prix_moyen_cotisation DESC, d.dep_code ASC
+ORDER BY prix_moyen_cotisation DESC
 LIMIT 10;
 
 -- Requête 11
@@ -84,7 +84,7 @@ INNER JOIN COMMUNE co
     ON c.Code_dep_code_commune = co.Code_dep_code_commune
 GROUP BY co.Code_dep_code_commune, co.com_nom_maj_court
 HAVING COUNT(*) >= 150
-ORDER BY nombre_contrats DESC, co.com_nom_maj_court ASC;
+ORDER BY nombre_contrats DESC;
 
 -- Requête 12
 -- Quel est le nombre de contrats pour chaque région ?
@@ -99,4 +99,4 @@ INNER JOIN DEPARTEMENT d
 INNER JOIN REGION r
     ON d.reg_code = r.reg_code
 GROUP BY r.reg_code, r.reg_nom
-ORDER BY nombre_contrats DESC, r.reg_nom ASC;
+ORDER BY nombre_contrats DESC;
