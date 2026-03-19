@@ -54,11 +54,14 @@ ORDER BY c.Contrat_ID;
 
 -- Requête 9
 -- Quelle est la surface moyenne des contrats à Paris ?
+-- Remarque : dans Region+.csv, les contrats parisiens sont rattachés aux arrondissements
+-- (PARIS  1 à PARIS 20, codes 75101 à 75120), pas à la commune globale PARIS
 SELECT AVG(c.Surface) AS surface_moyenne_paris
 FROM CONTRAT c
 INNER JOIN COMMUNE co
     ON c.Code_dep_code_commune = co.Code_dep_code_commune
-WHERE co.com_nom_maj_court = 'PARIS';
+WHERE co.dep_code = '75'
+  AND co.com_nom_maj_court LIKE 'PARIS%';
 
 -- Requête 10
 -- Classement des 10 départements où le prix moyen de la cotisation est le plus élevé.
