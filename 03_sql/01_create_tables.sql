@@ -42,7 +42,7 @@ CREATE TABLE CONTRAT (
     Voie VARCHAR(100),
     Code_dep_code_commune VARCHAR(10) NOT NULL,
     Code_postal VARCHAR(10),
-    Surface INT,
+    Surface INT NOT NULL,
     Type_local VARCHAR(50),
     Occupation VARCHAR(50),
     Type_contrat VARCHAR(100),

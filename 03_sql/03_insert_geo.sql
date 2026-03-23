@@ -3,7 +3,7 @@
 -- Script 03 : alimentation des tables géographiques normalisées
 -- Pré-requis : Region+.csv déjà importé dans GEO_SOURCE
 -- via l'outil d'import IntelliJ ou une autre méthode compatible.
--- Ce script est idempotent : il peut être relancé sans provoquer
+-- Ce script peut être relancé sans provoquer
 -- d'erreur de doublon sur les clés primaires.
 -- ============================================
 

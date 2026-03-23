@@ -5,28 +5,31 @@
 -- CONTRAT -> COMMUNE -> DEPARTEMENT -> REGION
 -- ============================================
 
--- Requête 4
+-- Requête 1
 -- Quels sont les 5 contrats qui ont les surfaces les plus élevées ?
 SELECT Contrat_ID, Surface
 FROM CONTRAT
 WHERE Surface IS NOT NULL
 ORDER BY Surface DESC
 LIMIT 5;
+-- Permet d’identifier les logements les plus grands
 
--- Requête 5
+-- Requête 2
 -- Quel est le prix moyen de la cotisation mensuelle ?
 SELECT AVG(Prix_cotisation_mensuel) AS prix_moyen_cotisation
 FROM CONTRAT;
+-- Analyse du coût moyen d’assurance
 
--- Requête 6
+-- Requête 3
 -- Quel est le nombre de contrats pour chaque catégorie de prix
 -- de la valeur déclarée des biens ?
 SELECT Valeur_declaree_biens, COUNT(*) AS nombre_contrats
 FROM CONTRAT
 GROUP BY Valeur_declaree_biens
 ORDER BY nombre_contrats DESC;
+-- Permet de segmenter les clients
 
--- Requête 7
+-- Requête 4
 -- Quel est le nombre de formules Integral sur la région Pays de la Loire ?
 SELECT COUNT(*) AS nb_formules_integral_pays_de_la_loire
 FROM CONTRAT c
@@ -38,8 +41,9 @@ INNER JOIN REGION r
     ON d.reg_code = r.reg_code
 WHERE c.Formule = 'Integral'
   AND r.reg_nom = 'Pays de la Loire';
+-- Analyse par région
 
--- Requête 8
+-- Requête 5
 -- Lister les numéros de contrats avec le type de contrat et leur formule
 -- pour les maisons du département 71.
 SELECT c.Contrat_ID, c.Type_contrat, c.Formule
@@ -52,7 +56,7 @@ WHERE c.Type_local = 'Maison'
   AND d.dep_code = '71'
 ORDER BY c.Contrat_ID;
 
--- Requête 9
+-- Requête 6
 -- Quelle est la surface moyenne des contrats à Paris ?
 -- Remarque : dans Region+.csv, les contrats parisiens sont rattachés aux arrondissements
 -- (PARIS  1 à PARIS 20, codes 75101 à 75120), pas à la commune globale PARIS
@@ -63,7 +67,7 @@ INNER JOIN COMMUNE co
 WHERE co.dep_code = '75'
   AND co.com_nom_maj_court LIKE 'PARIS%';
 
--- Requête 10
+-- Requête 7
 -- Classement des 10 départements où le prix moyen de la cotisation est le plus élevé.
 SELECT d.dep_code,
        d.dep_nom,
@@ -77,7 +81,7 @@ GROUP BY d.dep_code, d.dep_nom
 ORDER BY prix_moyen_cotisation DESC
 LIMIT 10;
 
--- Requête 11
+-- Requête 8
 -- Liste des communes ayant eu au moins 150 contrats.
 SELECT co.Code_dep_code_commune,
        co.com_nom_maj_court,
@@ -89,7 +93,7 @@ GROUP BY co.Code_dep_code_commune, co.com_nom_maj_court
 HAVING COUNT(*) >= 150
 ORDER BY nombre_contrats DESC;
 
--- Requête 12
+-- Requête 9
 -- Quel est le nombre de contrats pour chaque région ?
 SELECT r.reg_code,
        r.reg_nom,
